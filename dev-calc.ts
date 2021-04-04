@@ -1,6 +1,6 @@
 import * as readline from 'readline'
 
-const MY_VALUE: number = 53.57
+const MY_VALUE: number = 62.0
 const HEALTH_INSURANCE_VALUE: number = 866.65
 
 let cashHours: number
