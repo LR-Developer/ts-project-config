@@ -3,7 +3,7 @@ version: '3.6'
 services:
   application:
     build: './development'
-    command: sh -c "/wait && npm install && npm run start:local"
+    command: sh -c "/wait && npm install && npm run db:migrate && npm run start:local"
     restart: always
     working_dir: $PWD
     privileged: true

@@ -23,7 +23,8 @@
       "error",
       { "selector": "enumMember", "format": ["UPPER_CASE"] }
     ],
-    "@typescript-eslint/no-magic-numbers": true
+    "@typescript-eslint/no-magic-numbers": 2,
+    "@typescript-eslint/prefer-readonly-parameter-types": "off"
     // "@typescript-eslint/no-magic-numbers": ["error", { "ignoreEnums": true }]
   }
 }
