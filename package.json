@@ -6,6 +6,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev-calc": "tsc && node dist/dev-calc.js",
+    "db:cli": "ts-node -r tsconfig-paths/register ./node_modules/typeorm/cli.js --config src/infrastructure/database/TypeOrmConnectionOptions.ts",
+    "db:migrate:create": "npm run db:cli -- migration:create -n",
+    "db:migrate": "npm run db:cli -- migration:run",
     "start:local": "ts-node-dev --inspect=0.0.0.0:9229 ./scripts/run:local.ts"
   },
   "keywords": [],
@@ -17,7 +20,9 @@
     "concat-stream": "^2.0.0",
     "express": "^4.17.1",
     "mysql": "^2.18.1",
-    "typeorm": "^0.2.25"
+    "typeorm": "^0.2.25",
+    "typeorm-naming-strategies": "^1.1.0",
+    "typeorm-seeding": "^1.6.1"
   },
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^3.2.0",
