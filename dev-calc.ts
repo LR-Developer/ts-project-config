@@ -1,6 +1,6 @@
 import * as readline from 'readline'
 
-const MY_VALUE: number = 62.0
+const MY_VALUE: number = 65.0
 const HEALTH_INSURANCE_VALUE: number = 866.65
 
 let cashHours: number
@@ -14,7 +14,7 @@ let rl = readline.createInterface({
 })
 
 rl.question('Horas e Minutos: ', (answer) => {
-  const workedTime = answer.split('.')
+  const workedTime = answer.split(':')
 
   cashHours = parseInt(workedTime[0]) * MY_VALUE
   cashMinutes = (parseInt(workedTime[1]) / 60) * MY_VALUE
