@@ -2,9 +2,11 @@ import * as readline from 'readline'
 
 const MY_VALUE: number = 70.0
 const HEALTH_INSURANCE_VALUE: number = 866.65
+const MOODAR: number = 0
 
 let cashHours: number
 let cashMinutes: number
+let debts: number
 
 let totalCash: number
 
@@ -18,7 +20,9 @@ rl.question('Horas e Minutos: ', (answer) => {
 
   cashHours = parseInt(workedTime[0]) * MY_VALUE
   cashMinutes = (parseInt(workedTime[1]) / 60) * MY_VALUE
-  totalCash = cashHours + cashMinutes - HEALTH_INSURANCE_VALUE
+  debts = HEALTH_INSURANCE_VALUE + MOODAR
+
+  totalCash = cashHours + cashMinutes - debts
 
   const formatedCashValue = totalCash.toFixed(2)
 
